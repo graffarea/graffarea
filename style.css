@@ -20,7 +20,7 @@
 
 .container {
 
-  width: 1100px;
+  width: 800px;
   margin: 0 auto;
 }
 
@@ -57,12 +57,15 @@ li:hover a {
 
 
 #my-avatar {
-  padding-left: 15%;
+
   float: left;
   margin-right: 20px;
  
 }
 
+  #my-avatar img {
+    width: 330px;
+  }
 
 h3 {
   margin: 0;
@@ -169,7 +172,7 @@ form.contact-form {
 }
 
 #content > .container > div {
-  padding: 78px 0;
+  padding: 164px 0;
 }
 
 hr.bar {
@@ -197,3 +200,86 @@ h1 {
 #about {
   margin: 0 auto;
 }
+
+@media screen and (min-width: 1024px) {
+  .menu-button {
+    display: none;
+  }
+
+   .menu-button-checkbox {
+      display: none;
+
+   }
+}
+
+
+@media screen and (max-width: 1023px) {
+
+  /*  手機版的 css 都寫在這邊   */   
+
+  .container {
+    width: auto;
+  }
+
+ .menu-button-checkbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 40px;
+    opacity: 0;
+  }
+
+  .menu-button-checkbox:checked ~ .menu {
+    display: block;
+}
+
+  .menu-button {
+    float: right;
+    font-size: 25px;
+    line-height: 40px;
+    color: white;
+    background: transparent;
+    padding: 0 15px;
+    border: 0;
+  }
+
+    .menu {
+    display: none;
+    margin-top: 0;
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 150px;
+    height: 100%;
+  }
+
+  .menu li {
+    border: 0;
+    border-radius: 0;
+  }
+
+ #my-avatar {
+  width: 80%; 
+  }
+
+  #my-avatar img {
+    display: block;
+    margin: 15px auto;
+  }
+
+  .item {
+    max-width: 100%;
+  }
+
+  form.contact-form {
+    width: 80%;
+  }
+
+  #content > .container > div {
+  padding: 10% 0;
+}
+
+}
+
